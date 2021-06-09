@@ -16,7 +16,10 @@ public class Kalkulator {
 		System.out.println(broj1 * broj2);
 	}
 	
-	public static void dijeljenje(int broj1, int broj2) {
+	public static void dijeljenje(int broj1, int broj2) throws ExceptionNeDijelitiSNulom {
+		if (broj2 == 0) {
+			throw new ExceptionNeDijelitiSNulom();
+		}
 		System.out.println(broj1 / broj2);
 	}
 }
